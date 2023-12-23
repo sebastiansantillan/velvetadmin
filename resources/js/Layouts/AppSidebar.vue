@@ -34,51 +34,10 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-//import type { MenuItem } from '@/interfaces/MenuItem'
-import type { MenuItem } from 'resources/interfaces/MenuItem';
+import menuItems from '@/Config/Menu'
 import IconMenuOpen from '@/Components/Icons/IconMenuOpen.vue';
 
 const props = defineProps(['showMenu'])
-
-// Acá se setean los parámetros del menú
-const menuItems : MenuItem[] = [
-   {
-      titulo: 'Menu1',
-      link : '/menu1',
-      iconColor : 'text-red-600',
-      subgroup: [
-         { 
-            titulo: 'Subitem1a',
-            link : '/subitem1'
-         },
-         { 
-            titulo: 'Subitem2b',
-            link : '/subitem2'
-         }
-      ],
-      subGroupOpen: false
-   },
-   {
-      titulo: 'Menu2',
-      link : '/menu2',
-      subgroup: [
-         { 
-            titulo: 'Subitem3a',
-            link : '/subitem3'
-         },
-         { 
-            titulo: 'Subitem4b',
-            link : '/subitem4'
-         }
-      ],
-      subGroupOpen: false
-   },
-   {
-      titulo: 'Menu5',
-      link : 'menu5'
-   }
-];
-
 const menu = ref(menuItems)
 
 </script>
