@@ -21,7 +21,7 @@
                     <li>
                         <button @click="menuOpen = !menuOpen"
                             class="flex items-center justify-between pl-3 pr-4 text-gray-900 border-0 p-0 w-auto dark:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
-                            {{ $page.props.auth.user.name }}
+                            {{ page.props.auth.user.name }}
                             <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -51,16 +51,25 @@
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Head, Link, router } from '@inertiajs/vue3';
-import type { MenuItem } from 'resources/interfaces/MenuItem';
+import { Link, router, usePage } from '@inertiajs/vue3';
+import type { PageProps } from '@inertiajs/core';
+import type { MenuItem } from '@/Interfaces/Menu';
 import IconHamburger from '@/Components/Icons/IconHamburger.vue';
 import IconLogout from '@/Components/Icons/IconLogout.vue'
 
-const menuOpen = ref(false)
+interface AuthUser {
+    name: string;
+}
 
-const user = ref({
-    name : 'Jorge Luis Borges'
-})
+interface MyPageProps extends PageProps {
+    auth: {
+        user: AuthUser;
+    };
+}
+
+const page = usePage<MyPageProps>();
+
+const menuOpen = ref(false)
 
 const menu:MenuItem[] = [
    {
@@ -78,7 +87,7 @@ const menu:MenuItem[] = [
 ];
 
 const logout = () => {
-    router.post(route('logout'));
+    router.post('logout');
 };
 
 </script> 
