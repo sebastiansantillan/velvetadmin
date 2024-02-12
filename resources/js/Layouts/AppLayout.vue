@@ -6,7 +6,7 @@
     <div class="flex">
         <AppSidebar :show-menu="showAsideMenu" />
         <div class="w-full bg-slate-50">
-            <main class=" bg-white min-h-screen border rounded-lg mx-4 my-4 p-4">
+            <main class=" bg-white min-h-screen border rounded-lg mx-4 my-4 p-6">
                 <slot></slot>
             </main>
         </div>
