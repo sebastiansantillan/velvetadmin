@@ -10,7 +10,7 @@
                     <IconHamburger class="items-center text-slate-600" />
                 </button>
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                     <span class="font-medium text-slate-900">Inertia</span> <span class="text-slate-400"> Admin</span>
+                     <span class="font-medium text-slate-900">Velvet</span> <span class="text-slate-400"> Admin</span>
                 </span>
             </div>
 

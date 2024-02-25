@@ -1,12 +1,12 @@
-# Velvet Inertia Admin
+# Velvet Admin
 
-Panel de administración para Laravel + Vue3 + Tailwind con Inertia3. Incluye soporte Typescript.
+Panel de administración para Laravel + Vue3.4 + Tailwind con Inertia3. Incluye soporte Typescript.
 
 ## Stack
 
 - Laravel 10.x
 - Inertia3-Vue
-- Vue3
+- Vue 3.4
 
 ## Instalación y configuración
 
