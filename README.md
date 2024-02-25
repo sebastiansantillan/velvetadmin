@@ -32,3 +32,7 @@ php artisan migrate
 php artisan key:generate
 npm install
 ```
+
+### Librerías externas:
+
+https://github.com/sagalbot/vue-select

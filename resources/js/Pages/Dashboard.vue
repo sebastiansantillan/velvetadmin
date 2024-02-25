@@ -28,14 +28,11 @@
         <div class="mt-2 grid gap-x-6 gap-y-2 sm:grid-cols-6 lg:grid-cols-12">
             <div class="sm:col-span-2 lg:col-span-4">
                 <v-label>Label 4</v-label>
-                <v-select>
-                    <option value="">Item 1</option>
-                    <option value="">Item 2</option>                    
-                </v-select>
+                <v-select v-model="selectedItem" :options="selectItems" label="label" taggable multiple/>
             </div>
             <div class="sm:col-span-2 lg:col-span-4">
                 <v-label>Label 2</v-label>
-                <v-input/>
+                <VSelectCustom v-model="selectedItem" :reduce="(selectItems) => selectItems.value" :options="selectItems" label="label"/>
             </div>
             <div class="sm:col-span-2 lg:col-span-4">
                 <v-label>Label 3</v-label>
@@ -59,10 +56,16 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import VH1 from '@/Components/VH1.vue';
 import VLabel from '@/Components/VLabel.vue'
 import VInput from '@/Components/VInput.vue'
-import VSelect from '@/Components/VSelect.vue'
+import VSelectCustom from '@/Components/VSelectCustom.vue'
 import VTextArea from '@/Components/VTextArea.vue'
 import VButtonPrimary from '@/Components/VButtonPrimary.vue'
 
 const comentario = ref('Este es un comentario')
+const selectedItem = ref<string | number | readonly string[]>()
+const selectItems = [
+  { value: '1', label: 'DVD' },
+  { value: '2', label: 'Blu-Ray' },
+  // Puedes agregar más elementos aquí según sea necesario
+]
 </script>
 
