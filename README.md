@@ -33,6 +33,8 @@ php artisan key:generate
 npm install
 ```
 
-### Librerías externas:
-
-https://github.com/sagalbot/vue-select
+### Librerías externas
+- tinymce
+- @tinymce/tinymce-vue
+- https://github.com/sagalbot/vue-select
+- https://github.com/robcresswell/vue-material-design-icons
