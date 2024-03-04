@@ -13,7 +13,7 @@ Panel de administración para Laravel + Vue3.4 + Tailwind con Inertia3. Incluye 
 1. Clonar el repositorio en local con el nombre que va a tener el proyecto:
 
 ```sh
-git clone https://github.com/sebastiansantillan/inertiaadmin.git nombredelproyecto
+git clone https://github.com/sebastiansantillan/velvetadmit.git nombredelproyecto
 ```
 
 2. Acceder al directorio:
