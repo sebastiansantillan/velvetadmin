@@ -4,25 +4,25 @@
         <div class="mt-6 grid gap-x-6 gap-y-2 sm:grid-cols-6 lg:grid-cols-12">
             <div class="sm:col-span-3 lg:col-span-6">
                 <v-label>Título</v-label>
-                <v-input/>
+                <v-input v-model="pelicula.titulo"/>
             </div>
             <div class="sm:col-span-3 lg:col-span-6">
-                <v-label>Subtítulo</v-label>
-                <v-input/>
+                <v-label>Título original</v-label>
+                <v-input v-model="pelicula.titulo_original"/>
             </div>
         </div>
         <div class="mt-2 grid gap-x-6 gap-y-2 sm:grid-cols-6 lg:grid-cols-12">
-            <div class="sm:col-span-2 lg:col-span-4">
-                <v-label>Label 1</v-label>
-                <v-input/>
+            <div class="sm:col-span-2 lg:col-span-2">
+                <v-label>Año</v-label>
+                <v-input v-model="pelicula.ano"/>
             </div>
             <div class="sm:col-span-2 lg:col-span-4">
-                <v-label>Label 2</v-label>
-                <v-input/>
+                <v-label>Origen</v-label>
+                <v-select v-model="pelicula.origen" :options="paises" :reduce="paises => paises.value" label="label" multiple/>
             </div>
-            <div class="sm:col-span-2 lg:col-span-4">
-                <v-label>Label 3</v-label>
-                <v-input/>
+            <div class="sm:col-span-2 lg:col-span-2">
+                <v-label>Duración</v-label>
+                <v-input v-model="pelicula.duracion"/>
             </div>            
         </div>
         <div class="mt-2 grid gap-x-6 gap-y-2 sm:grid-cols-6 lg:grid-cols-12">
@@ -67,26 +67,37 @@ import VTextArea from '@/Components/VTextArea.vue'
 import VButtonPrimary from '@/Components/VButtonPrimary.vue'
 import TinyMCE from '@/Components/TinyMCE.vue';
 
+const paises = [
+  { value: 1, label: 'EE.UU' },
+  { value: 2, label: 'Argentina' },
+  { value: 3, label: 'Francia' },
+  { value: 4, label: 'Alemania' },
+  { value: 5, label: 'Suecia' }
+]
 
-const comentario = ref( `<p>I’m running Tiptap with Vue.js. 🎉</p>
-    <ul>
-<li><strong>El Humanoide</strong>&nbsp;por Eduardo A. Azcuy</li>
-<li><strong>Mac Cain</strong>&nbsp;por Juan-Jacobo Bajarlía</li>
-<li><strong>El Prisionero</strong>&nbsp;por Ernesto Bayma</li>
-<li><strong>El Trasplante</strong>&nbsp;por Carlos María Caron</li>
-<li><strong>Boroboboo</strong>&nbsp;por Marco Denevi</li>
-<li><strong>Las Fábulas</strong> por Osvaldo Ellijf</li>
-<li><strong>El Espía</strong>&nbsp;por Eduardo Goligorsky</li>
-<li><strong>Los Herederos</strong>&nbsp;por Alfredo Grassi</li>
-<li><strong>Dos Muertes</strong>&nbsp;por Héctor Oesterheld</li>
-<li><strong>Oliverio</strong>&nbsp;por Víctor Pronzato</li>
-<li><strong>Una medusa en la playa</strong>&nbsp;por Alejandro Vignati</li>
-</ul>`)
+const generos = [
+  { value: 1, label: 'Comedia' },
+  { value: 2, label: 'Drama' },
+  { value: 3, label: 'Romance' },
+  { value: 4, label: 'Ciencia Ficción' },
+  { value: 5, label: 'Terror' }
+]
+
+
+
+const pelicula = ref({
+    'titulo' : 'Intriga internacional',
+    'titulo_original' : 'North by Northwest',
+    'ano' : '1959',    
+    'origen' :[3,4],
+    'duracion' : ''
+})
+
+const comentario = ref('')
 const selectedItem = ref<string | number | readonly string[]>()
 const selectItems = [
   { value: '1', label: 'DVD' },
   { value: '2', label: 'Blu-Ray' },
-  // Puedes agregar más elementos aquí según sea necesario
 ]
 </script>
 
