@@ -57,6 +57,7 @@
     toolbar: props.toolbar,
     quickbars_insert_toolbar: false,
     branding: false,
+    license_key: 'gpl'
   });
   
   const { modelValue } = toRefs(props);
