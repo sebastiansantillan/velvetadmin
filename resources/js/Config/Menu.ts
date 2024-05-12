@@ -1,7 +1,7 @@
 import type { MenuItem } from '@/Interfaces/Menu';
 const menuItems : MenuItem[] = [
     {
-       titulo: 'Menu1 - aabc',
+       titulo: 'Menu1',
        link : '/menu1',
        iconColor : 'text-red-600',
        subgroup: [
@@ -32,8 +32,8 @@ const menuItems : MenuItem[] = [
        subGroupOpen: false
     },
     {
-       titulo: 'Menu5',
-       link : 'menu5'
+       titulo: 'Menu3',
+       link : 'menu3'
     }
  ];
 
