@@ -19,6 +19,7 @@
         "vue": "^3.3.13"
     },
     "dependencies": {
+        "@sebastian.santillan/vue3-components": "^0.1.11-alpha",
         "@tinymce/tinymce-vue": "^5.1.1",
         "tinymce": "^7.1.0",
         "tinymce-i18n": "^24.5.8"

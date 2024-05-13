@@ -17,12 +17,13 @@
                 <TinyMCE/>
             </div>
         </div>
+        <div class="mt-6">
+            <VButtonPrimary>Guardar</VButtonPrimary>
+        </div>
     </AppLayout>
 </template>
 <script setup lang="ts">
 import AppLayout from '@/Layouts/AppLayout.vue';
-import VLabel from '@/Components/Velvet/VLabel.vue';
-import VInput from '@/Components/Velvet/VInput.vue';
-import VH1 from '@/Components/Velvet/VH1.vue';
+import { VH1, VLabel, VInput, VButtonPrimary } from '@sebastian.santillan/vue3-components';
 import TinyMCE from '@/Components/Velvet/TinyMCE.vue';
 </script>
